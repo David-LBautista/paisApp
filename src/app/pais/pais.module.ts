@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 //! Componentes
 import { PorCapitalComponent } from './pages/por-capital/por-capital.component';
@@ -22,7 +23,8 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
     VerPaisComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class PaisModule { }
