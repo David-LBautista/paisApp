@@ -10,10 +10,12 @@ export class PaisTablaComponent implements OnInit {
   
   //*La info viene desde porPaisComponent
   @Input() paises: Country[] = [];
+  @Input() capitales: Country[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

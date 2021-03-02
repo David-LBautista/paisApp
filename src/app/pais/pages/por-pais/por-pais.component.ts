@@ -11,7 +11,6 @@ export class PorPaisComponent implements OnInit {
 
   termino:string = '';
   hayError: boolean = false;
-
   paises: Country[] = [];
 
   constructor(
@@ -33,6 +32,12 @@ export class PorPaisComponent implements OnInit {
       this.hayError = true;
       this.paises = [];
     })
+  }
+
+  sugerencias( termino:string ){
+    this.hayError = false;
+    
+    
   }
 
 }
