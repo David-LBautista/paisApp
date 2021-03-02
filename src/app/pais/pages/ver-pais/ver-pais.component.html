@@ -1,1 +1,48 @@
-<p>ver-pais works!</p>
+<div *ngIf="!pais; else divPais" class="alert alert-info">
+    Espere porfavor...
+</div>
+
+
+
+<ng-template #divPais>
+    <div class="row">
+        <div class="col-12">
+            <h1>Pais: <small>{{ pais.name | uppercase}}</small></h1>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img class="small-flag" [src]="pais.flag" alt="">
+        </div>
+        <div class="col">
+            <h3>Informacion:</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Población: <strong>{{ pais.population | number}}</strong>
+                </li>
+                <li class="list-group-item">
+                    Currencies: <strong>{{ pais.currencies[0].name }}</strong>
+                </li>
+                <ul class="list-group">
+                    <li class="list-group-item">Languages: <strong>{{ pais.languages[0].iso639_1 }}</strong></li>
+
+                </ul>
+                <li class="list-group-item">
+                    Cápital: <strong>{{ pais.capital }}</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mt-5">
+        Response:
+        <div>
+            <pre>
+                {{ pais | json }}
+            </pre>
+        </div>
+
+    </div>
+
+</ng-template>
