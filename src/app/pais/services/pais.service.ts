@@ -36,4 +36,11 @@ export class PaisService {
 
     return this.http.get<Country[]>(url);
   }
+
+  getAllPaises(){
+
+    const url = `${this.api}/all`;
+
+    return this.http.get<Country[]>(url);
+  }
 }
