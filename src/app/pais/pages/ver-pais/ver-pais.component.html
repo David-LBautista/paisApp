@@ -1,4 +1,4 @@
-<div *ngIf="!pais; else divPais" class="alert alert-info">
+<div *ngIf="!pais; else divPais" class="alert alert-info text-center">
     Espere porfavor...
 </div>
 
@@ -26,7 +26,7 @@
                     Currencies: <strong>{{ pais.currencies[0].name }}</strong>
                 </li>
                 <ul class="list-group">
-                    <li class="list-group-item">Languages: <strong>{{ pais.languages[0].iso639_1 }}</strong></li>
+                    <li class="list-group-item">Languages: <strong>{{ pais.languages[0].name }}</strong></li>
 
                 </ul>
                 <li class="list-group-item">
